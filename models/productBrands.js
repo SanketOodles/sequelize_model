@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
                 as: 'brands' 
             });
             productBrands.belongsTo(models.Products, { 
-                foreignKey: 'product_id', 
+                foreignKey: 'id', 
                 as: 'products' 
             });
         }
@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
         product_id: DataTypes.INTEGER,
         brand_id: DataTypes.INTEGER,
-        status: DataTypes.INTEGER,
+        status: DataTypes.STRING,
         created_at: DataTypes.DATE,
         updated_at: DataTypes.DATE,
         deleted_at: DataTypes.DATE,

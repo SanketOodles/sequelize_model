@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const { Model } = require('sequelize');
 
@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
             //one Brand has to many productBrands
             Brands.hasMany(models.productBrands,{
                 foreignKey:'brand_id',
-                as:'product_brands',
+                as:'productbrands',
             });
 
             Brands.belongsTo(models.Organisations,{
